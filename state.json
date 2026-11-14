@@ -1,9 +1,96 @@
 {
- "offset": 484304879,
- "queue": [],
- "last_post": null,
- "posted": [],
+ "offset": 484304910,
+ "queue": [
+  {
+   "asin": "B0976YC7BM",
+   "title": "رؤوس فرشاة Oral-B iO الأصلية (4 قطع)",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B095K2L6YW",
+   "title": "جل Finish Power لغسالة الأطباق (120 غسلة)",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0HF1TB1B5",
+   "title": "معطر غسيل Lenor للغسالة",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0FNWFXG2W",
+   "title": "سماعات بلوتوث Anker Soundcore P31i بعزل الضوضاء",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0FJM47NB2",
+   "title": "شاحن Belkin سريع 100 واط بـ 3 منافذ USB-C",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0F4Z28N47",
+   "title": "كبسولات قهوة Kimbo نابولي متوافقة مع Nespresso (60 كبسولة)",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0B2PXGM56",
+   "title": "مقبس كهرباء ذكي Tapo واي فاي تتحكم فيه من الموبايل",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0FQJZN83W",
+   "title": "منظف غسيل Omino Bianco المعقم (3 عبوات × 2 لتر)",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0BVMJMZY7",
+   "title": "مناديل مطبخ Scottex عرض العيلة",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0DZ2XWBP7",
+   "title": "منظف غسيل Dash سائل (80 غسلة)",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B09HV58YR5",
+   "title": "كبسولات Finish Ultimate لغسالة الأطباق (160 كبسولة)",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0DWNGD34L",
+   "title": "مناديل Swiffer لتنظيف الأرضيات (216 منديل)",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B07Q6Y5SC7",
+   "title": "ورق تواليت Scottonelle (84 رول)",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0DWXVSX62",
+   "title": "شفرات Gillette Fusion5 الأصلية (12 شفرة)",
+   "new": null,
+   "old": null
+  }
+ ],
+ "last_post": "2026-11-14T22:57:53.707745+01:00",
+ "posted": [
+  "B0FC2LC44J"
+ ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-14",
- "total_posted": 0
+ "total_posted": 1
 }

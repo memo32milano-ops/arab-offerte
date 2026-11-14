@@ -278,7 +278,9 @@ def main():
     st = load_state()
     now = datetime.now(TZ)
 
+    me = tg("getMe").get("result", {})
     upd = tg("getUpdates", offset=st["offset"], timeout=0, allowed_updates=["message"])
+    print(f"bot=@{me.get('username')} updates={len(upd.get('result', []))} queue={len(st['queue'])}")
     for u in upd.get("result", []):
         st["offset"] = u["update_id"] + 1
         if "message" in u:

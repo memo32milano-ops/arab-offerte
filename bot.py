@@ -4,7 +4,7 @@ Runs every ~10 minutes on GitHub Actions (no server needed).
 
 How it works:
   1. The admin sends an Amazon.it link to the bot in private (from the Amazon app "Share" button).
-     Optional line 2: short Arabic title.  Optional line 3: "new_price old_price"  e.g.  19.99 34.99
+     Optional line 2: short Arabic title. (No prices: Amazon forbids manually typed prices.)
   2. The bot cleans the link, adds the affiliate tag, and puts the deal in a queue.
   3. The bot publishes deals to the channel at good times (08:00-22:30 Rome), spaced out,
      so the channel stays active all day even if you add 20 deals at once.
@@ -49,7 +49,7 @@ HELP = (
     "الشكل:\n"
     "السطر 1: اللينك\n"
     "السطر 2 (اختياري): عنوان قصير بالعربي\n"
-    "السطر 3 (اختياري): السعر الجديد والقديم، مثلاً: 19.99 34.99\n\n"
+    "(متكتبش أسعار: شروط أمازون بتمنع نشر سعر مكتوب باليد)\n\n"
     "الأوامر:\n"
     "/queue – العروض اللي مستنية النشر\n"
     "/now – انشر العرض الجاي حالاً\n"
@@ -160,26 +160,19 @@ def fmt_price(x):
 
 
 def build_post(d, now):
+    # Amazon's policies forbid showing prices that were typed by hand (only API/Amazon-served
+    # prices are allowed), so posts never show a price: the link preview and Amazon page do.
     link = affiliate_link(d["asin"])
-    lines = []
-    title = html.escape(d["title"]) if d["title"] else "عرض جديد من أمازون"
-    pct = None
-    if d.get("new") and d.get("old") and d["old"] > d["new"]:
-        pct = round((1 - d["new"] / d["old"]) * 100)
-    head = "🔥" if pct and pct >= 40 else "⚡️"
-    lines.append(f"{head} <b>{title}</b>")
-    lines.append("")
-    if d.get("new"):
-        if pct:
-            lines.append(f"💰 السعر: <b>{fmt_price(d['new'])}€</b> بدل <s>{fmt_price(d['old'])}€</s>")
-            lines.append(f"📉 خصم <b>{pct}%</b>")
-        else:
-            lines.append(f"💰 السعر: <b>{fmt_price(d['new'])}€</b>")
-    lines.append(f"🛒 <a href=\"{link}\">اطلب من هنا</a>")
-    lines.append("")
-    if d.get("new"):
-        lines.append(f"⏳ السعر وقت النشر ({now:%d/%m %H:%M}) وقد يتغير في أي لحظة")
-    lines.append("#عروض #adv")
+    title = html.escape(d["title"]) if d["title"] else "عرض جديد على أمازون"
+    lines = [
+        f"🔥 <b>{title}</b>",
+        "",
+        "💸 خصم الآن على أمازون إيطاليا",
+        f"🛒 <a href=\"{link}\">شوف السعر الحالي واطلب من هنا</a>",
+        "",
+        "⏳ العروض تنتهي بسرعة",
+        "#عروض #adv",
+    ]
     return "\n".join(lines), link
 
 
@@ -268,8 +261,7 @@ def handle(st, msg, now):
             reply(chat_id, "⚠️ المنتج ده اتنشر أو موجود في الطابور قريب. مش هكرره.")
         else:
             st["queue"].append(deal)
-            extra = "" if deal.get("new") else "\n💡 نصيحة: ضيف السعر الجديد والقديم في سطر لوحده عشان يظهر الخصم."
-            reply(chat_id, f"✅ اتضاف للطابور (رقم {len(st['queue'])}).{extra}")
+            reply(chat_id, f"✅ اتضاف للطابور (رقم {len(st['queue'])}).")
 
 
 def main():

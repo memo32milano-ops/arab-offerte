@@ -22,9 +22,9 @@
 2. **القناة:** اعمل قناة Public، وضيف البوت فيها **أدمن** بصلاحية النشر.
 3. **أمازون:** سجّل في programma-affiliazione.amazon.it، وضيف لينك القناة كمكان للترويج، وخد الـ tag بتاعك (شكله زي `xxxxx-21`).
 4. **GitHub:** في الريبو ← Settings ← Secrets and variables ← Actions، ضيف:
-   - `BOT_TOKEN`: توكن البوت
-   - `CHANNEL_ID`: يوزر القناة، مثلاً `@ArabOfferteItalia`
-   - `AMAZON_TAG`: الـ tag بتاع أمازون
+   - Secret اسمه `BOT_TOKEN`: توكن البوت
+   - Variable اسمه `AMAZON_TAG`: الـ tag بتاع أمازون (في تبويب Variables)
+   - القناة متحددة جوه ملف الـ workflow: `@ArabOfferteItalia`
 5. ابعت `/start` للبوت. أول واحد يبعت بيتسجل أدمن، وده انت.
 
 ## ملاحظات

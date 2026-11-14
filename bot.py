@@ -178,7 +178,7 @@ def build_post(d, now):
     lines.append(f"🛒 <a href=\"{link}\">اطلب من هنا</a>")
     lines.append("")
     if d.get("new"):
-        lines.append(f"⏳ السعر وقت النشر ({now:%d/%m %H:%M}) وممكن يتغير في أي لحظة")
+        lines.append(f"⏳ السعر وقت النشر ({now:%d/%m %H:%M}) وقد يتغير في أي لحظة")
     lines.append("#عروض #adv")
     return "\n".join(lines), link
 

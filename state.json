@@ -2,12 +2,6 @@
  "offset": 484304910,
  "queue": [
   {
-   "asin": "B0FQJZN83W",
-   "title": "منظف غسيل Omino Bianco المعقم (3 عبوات × 2 لتر)",
-   "new": null,
-   "old": null
-  },
-  {
    "asin": "B0BVMJMZY7",
    "title": "مناديل مطبخ Scottex عرض العيلة",
    "new": null,
@@ -44,7 +38,7 @@
    "old": null
   }
  ],
- "last_post": "2026-11-15T12:53:30.179086+01:00",
+ "last_post": "2026-11-15T14:24:20.880094+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
@@ -53,9 +47,10 @@
   "B0FNWFXG2W",
   "B0FJM47NB2",
   "B0F4Z28N47",
-  "B0B2PXGM56"
+  "B0B2PXGM56",
+  "B0FQJZN83W"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-15",
- "total_posted": 8
+ "total_posted": 9
 }

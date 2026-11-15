@@ -2,12 +2,6 @@
  "offset": 484304910,
  "queue": [
   {
-   "asin": "B0F4Z28N47",
-   "title": "كبسولات قهوة Kimbo نابولي متوافقة مع Nespresso (60 كبسولة)",
-   "new": null,
-   "old": null
-  },
-  {
    "asin": "B0B2PXGM56",
    "title": "مقبس كهرباء ذكي Tapo واي فاي تتحكم فيه من الموبايل",
    "new": null,
@@ -56,16 +50,17 @@
    "old": null
   }
  ],
- "last_post": "2026-11-15T10:42:50.753348+01:00",
+ "last_post": "2026-11-15T11:23:21.462165+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
   "B095K2L6YW",
   "B0HF1TB1B5",
   "B0FNWFXG2W",
-  "B0FJM47NB2"
+  "B0FJM47NB2",
+  "B0F4Z28N47"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-15",
- "total_posted": 6
+ "total_posted": 7
 }

@@ -2,12 +2,6 @@
  "offset": 484304910,
  "queue": [
   {
-   "asin": "B09HV58YR5",
-   "title": "كبسولات Finish Ultimate لغسالة الأطباق (160 كبسولة)",
-   "new": null,
-   "old": null
-  },
-  {
    "asin": "B0DWNGD34L",
    "title": "مناديل Swiffer لتنظيف الأرضيات (216 منديل)",
    "new": null,
@@ -26,7 +20,7 @@
    "old": null
   }
  ],
- "last_post": "2026-11-15T17:25:46.297368+01:00",
+ "last_post": "2026-11-15T18:56:36.746038+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
@@ -38,9 +32,10 @@
   "B0B2PXGM56",
   "B0FQJZN83W",
   "B0BVMJMZY7",
-  "B0DZ2XWBP7"
+  "B0DZ2XWBP7",
+  "B09HV58YR5"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-15",
- "total_posted": 11
+ "total_posted": 12
 }

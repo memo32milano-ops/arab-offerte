@@ -2,12 +2,6 @@
  "offset": 484304910,
  "queue": [
   {
-   "asin": "B0HF1TB1B5",
-   "title": "معطر غسيل Lenor للغسالة",
-   "new": null,
-   "old": null
-  },
-  {
    "asin": "B0FNWFXG2W",
    "title": "سماعات بلوتوث Anker Soundcore P31i بعزل الضوضاء",
    "new": null,
@@ -74,13 +68,14 @@
    "old": null
   }
  ],
- "last_post": "2026-11-15T08:41:20.717182+01:00",
+ "last_post": "2026-11-15T09:21:50.272501+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
-  "B095K2L6YW"
+  "B095K2L6YW",
+  "B0HF1TB1B5"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-15",
- "total_posted": 3
+ "total_posted": 4
 }

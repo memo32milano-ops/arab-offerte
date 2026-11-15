@@ -2,12 +2,6 @@
  "offset": 484304910,
  "queue": [
   {
-   "asin": "B0BVMJMZY7",
-   "title": "مناديل مطبخ Scottex عرض العيلة",
-   "new": null,
-   "old": null
-  },
-  {
    "asin": "B0DZ2XWBP7",
    "title": "منظف غسيل Dash سائل (80 غسلة)",
    "new": null,
@@ -38,7 +32,7 @@
    "old": null
   }
  ],
- "last_post": "2026-11-15T14:24:20.880094+01:00",
+ "last_post": "2026-11-15T15:55:03.600988+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
@@ -48,9 +42,10 @@
   "B0FJM47NB2",
   "B0F4Z28N47",
   "B0B2PXGM56",
-  "B0FQJZN83W"
+  "B0FQJZN83W",
+  "B0BVMJMZY7"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-15",
- "total_posted": 9
+ "total_posted": 10
 }

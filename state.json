@@ -2,12 +2,6 @@
  "offset": 484304910,
  "queue": [
   {
-   "asin": "B0976YC7BM",
-   "title": "رؤوس فرشاة Oral-B iO الأصلية (4 قطع)",
-   "new": null,
-   "old": null
-  },
-  {
    "asin": "B095K2L6YW",
    "title": "جل Finish Power لغسالة الأطباق (120 غسلة)",
    "new": null,
@@ -86,11 +80,12 @@
    "old": null
   }
  ],
- "last_post": "2026-11-14T22:57:53.707745+01:00",
+ "last_post": "2026-11-15T08:00:48.962447+01:00",
  "posted": [
-  "B0FC2LC44J"
+  "B0FC2LC44J",
+  "B0976YC7BM"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-15",
- "total_posted": 1
+ "total_posted": 2
 }

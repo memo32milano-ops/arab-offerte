@@ -2,12 +2,6 @@
  "offset": 484304910,
  "queue": [
   {
-   "asin": "B0B2PXGM56",
-   "title": "مقبس كهرباء ذكي Tapo واي فاي تتحكم فيه من الموبايل",
-   "new": null,
-   "old": null
-  },
-  {
    "asin": "B0FQJZN83W",
    "title": "منظف غسيل Omino Bianco المعقم (3 عبوات × 2 لتر)",
    "new": null,
@@ -50,7 +44,7 @@
    "old": null
   }
  ],
- "last_post": "2026-11-15T11:23:21.462165+01:00",
+ "last_post": "2026-11-15T12:53:30.179086+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
@@ -58,9 +52,10 @@
   "B0HF1TB1B5",
   "B0FNWFXG2W",
   "B0FJM47NB2",
-  "B0F4Z28N47"
+  "B0F4Z28N47",
+  "B0B2PXGM56"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-15",
- "total_posted": 7
+ "total_posted": 8
 }

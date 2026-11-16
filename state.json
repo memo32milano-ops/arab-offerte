@@ -1,14 +1,7 @@
 {
  "offset": 484304910,
- "queue": [
-  {
-   "asin": "B0DWXVSX62",
-   "title": "شفرات Gillette Fusion5 الأصلية (12 شفرة)",
-   "new": null,
-   "old": null
-  }
- ],
- "last_post": "2026-11-15T21:57:31.221860+01:00",
+ "queue": [],
+ "last_post": "2026-11-16T08:00:00.173349+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
@@ -23,9 +16,10 @@
   "B0DZ2XWBP7",
   "B09HV58YR5",
   "B0DWNGD34L",
-  "B07Q6Y5SC7"
+  "B07Q6Y5SC7",
+  "B0DWXVSX62"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-16",
- "total_posted": 14
+ "total_posted": 15
 }

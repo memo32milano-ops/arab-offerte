@@ -1,0 +1,23 @@
+name: post-now
+on:
+  workflow_dispatch:
+    inputs:
+      which:
+        description: 'campaign index, search query, or "hub"'
+        default: '0'
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install requests==2.32.3
+      - env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          CHANNEL_ID: "@ArabOfferteItalia"
+          AMAZON_TAG: ${{ vars.AMAZON_TAG }}
+          POST_NOW: ${{ github.event.inputs.which }}
+          STATE_FILE: /tmp/state_unused.json
+        run: python bot.py

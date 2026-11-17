@@ -357,6 +357,19 @@ def main():
     st = load_state()
     now = datetime.now(TZ)
 
+    # one-shot "post now" (separate workflow): posts one themed offer, doesn't touch state.json
+    pn = os.environ.get("POST_NOW", "").strip()
+    if pn:
+        if pn == "hub":
+            text, link = build_hub(now)
+        else:
+            camps = load_campaigns()
+            c = next((x for x in camps if x["q"] == pn), None) or camps[int(pn) % len(camps) if pn.isdigit() else 0]
+            text, link = build_campaign(c, now)
+        res = send_post(text, link)
+        print("POST_NOW", "ok" if res.get("ok") else res)
+        sys.exit(0 if res.get("ok") else 1)
+
     me = tg("getMe").get("result", {})
     upd = tg("getUpdates", offset=st["offset"], timeout=0, allowed_updates=["message"])
     print(f"bot=@{me.get('username')} updates={len(upd.get('result', []))} queue={len(st['queue'])}")

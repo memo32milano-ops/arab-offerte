@@ -73,6 +73,8 @@ def load_state():
     st.setdefault("admin_id", None)
     st.setdefault("heartbeat", None)
     st.setdefault("total_posted", 0)
+    st.setdefault("camp_i", 0)
+    st.setdefault("last_slot", None)
     return st
 
 
@@ -159,21 +161,106 @@ def fmt_price(x):
     return s[:-3] if s.endswith(",00") else s
 
 
+BF_FROM, BF_TO = (11, 20), (12, 1)   # Black Friday week banner (month, day)
+
+
+def is_bf(now):
+    md = (now.month, now.day)
+    return BF_FROM <= md <= BF_TO
+
+
+def bf_line(now):
+    return "🖤 <b>بلاك فرايداي على أمازون إيطاليا</b>\n" if is_bf(now) else ""
+
+
 def build_post(d, now):
     # Amazon's policies forbid showing prices that were typed by hand (only API/Amazon-served
     # prices are allowed), so posts never show a price: the link preview and Amazon page do.
     link = affiliate_link(d["asin"])
     title = html.escape(d["title"]) if d["title"] else "عرض جديد على أمازون"
     lines = [
-        f"🔥 <b>{title}</b>",
+        bf_line(now) + f"🔥 <b>{title}</b>",
         "",
-        "💸 خصم الآن على أمازون إيطاليا",
-        f"🛒 <a href=\"{link}\">شوف السعر الحالي واطلب من هنا</a>",
+        "💸 عليه خصم دلوقتي على أمازون إيطاليا",
+        "🚚 توصيل سريع لحد البيت • إرجاع سهل",
         "",
-        "⏳ العروض تنتهي بسرعة",
+        f"👈 <a href=\"{link}\">شوف الخصم واطلب من هنا</a>",
+        "",
+        "⏳ الخصم لفترة محدودة",
         "#عروض #adv",
     ]
     return "\n".join(lines), link
+
+
+# ---------------- themed deal posts (no typed prices: Amazon filters the discount itself) ----------------
+CAMPAIGNS_FILE = os.environ.get("CAMPAIGNS_FILE", "campaigns.json")
+# 10 slots a day (Rome time): enough to stay visible without spamming the channel
+SLOTS = [(9, 0), (10, 30), (12, 0), (13, 30), (15, 0), (16, 30), (18, 0), (19, 30), (21, 0), (22, 15)]
+HUB_SLOTS = {(12, 0), (21, 0)}         # these slots post Amazon's daily-deals hub
+
+
+def load_campaigns():
+    try:
+        with open(CAMPAIGNS_FILE, encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return []
+
+
+def tagged(url):
+    if not TAG:
+        return url
+    return url + ("&" if "?" in url else "?") + f"tag={TAG}"
+
+
+def search_link(c):
+    q = requests.utils.quote(c["q"])
+    # pct-off=N- : Amazon's own filter "discount N% or more", sorted by Amazon (featured)
+    return tagged(f"https://www.amazon.it/s?k={q}&pct-off={int(c.get('p', 50))}-")
+
+
+def build_campaign(c, now):
+    link = search_link(c)
+    lines = [
+        bf_line(now) + f"{c['e']} <b>{html.escape(c['t'])} — خصم {int(c.get('p', 50))}% وأكتر</b>",
+        "",
+        f"✅ {html.escape(c['h'])}",
+        "🔎 اخترنالك من أمازون إيطاليا المنتجات اللي عليها أكبر خصومات بس",
+        "",
+        f"👈 <a href=\"{link}\">افتح العروض دلوقتي</a>",
+        "",
+        "⏳ الخصومات بتتغير كل ساعة — الشاطر يلحق",
+        "#عروض #adv",
+    ]
+    return "\n".join(lines), link
+
+
+def build_hub(now):
+    link = tagged("https://www.amazon.it/deals")
+    lines = [
+        bf_line(now) + "⚡ <b>عروض اليوم على أمازون إيطاليا</b>",
+        "",
+        "🔥 خصومات لحد 70% وأكتر على ماركات كبيرة — بتخلص بسرعة",
+        "📱 موبايلات • 🎧 سماعات • 🛠 أدوات • 🏠 بيت ومطبخ • 👟 لبس",
+        "",
+        f"👈 <a href=\"{link}\">شوف كل عروض النهارده</a>",
+        "",
+        "#عروض_اليوم #adv",
+    ]
+    return "\n".join(lines), link
+
+
+def current_slot(now):
+    for h, m in SLOTS:
+        start = now.replace(hour=h, minute=m, second=0, microsecond=0)
+        if 0 <= (now - start).total_seconds() < 25 * 60:
+            return (h, m)
+    return None
+
+
+def send_post(text, link, large=True):
+    return tg("sendMessage", chat_id=CHANNEL, text=text, parse_mode="HTML",
+              link_preview_options={"url": link, "prefer_large_media": large, "show_above_text": True})
 
 
 def publish_next(st, now):
@@ -281,8 +368,27 @@ def main():
             except Exception as e:   # one bad message must not stop the bot
                 print(f"[handle] {e}", file=sys.stderr)
 
-    if due(st, now):
-        publish_next(st, now)
+    slot = current_slot(now)
+    key = now.strftime("%Y-%m-%d ") + (f"{slot[0]:02d}:{slot[1]:02d}" if slot else "")
+    if slot and st.get("last_slot") != key:
+        st["last_slot"] = key
+        if st["queue"]:
+            publish_next(st, now)                      # your own picks come first
+        else:
+            if slot in HUB_SLOTS:
+                text, link = build_hub(now)
+            else:
+                camps = load_campaigns()
+                text, link = (None, None)
+                if camps:
+                    i = st.get("camp_i", 0) % len(camps)
+                    st["camp_i"] = i + 1
+                    text, link = build_campaign(camps[i], now)
+            if text and send_post(text, link).get("ok"):
+                st["last_post"] = now.isoformat()
+                st["total_posted"] += 1
+    elif due(st, now) and len(st["queue"]) > 3:
+        publish_next(st, now)                          # long queue: also post between slots
 
     # daily heartbeat commit keeps GitHub from pausing the schedule
     st["heartbeat"] = now.strftime("%Y-%m-%d")

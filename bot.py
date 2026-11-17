@@ -258,9 +258,28 @@ def current_slot(now):
     return None
 
 
-def send_post(text, link, large=True):
+def send_post(text, link, large=True, image=None):
+    """Themed posts go out as a photo (our own branded card) with the text as caption."""
+    if image and os.path.exists(image):
+        try:
+            with open(image, "rb") as f:
+                r = requests.post(f"{API}/sendPhoto", data={"chat_id": CHANNEL, "caption": text, "parse_mode": "HTML"},
+                                  files={"photo": f}, timeout=60)
+            data = r.json()
+            if data.get("ok"):
+                return data
+            print(f"[telegram] sendPhoto failed: {data}", file=sys.stderr)
+        except requests.RequestException as e:
+            print(f"[telegram] sendPhoto error: {e}", file=sys.stderr)
     return tg("sendMessage", chat_id=CHANNEL, text=text, parse_mode="HTML",
               link_preview_options={"url": link, "prefer_large_media": large, "show_above_text": True})
+
+
+IMG_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "img")
+
+
+def camp_image(i):
+    return os.path.join(IMG_DIR, f"c{i:02d}.jpg")
 
 
 def publish_next(st, now):
@@ -362,11 +381,15 @@ def main():
     if pn:
         if pn == "hub":
             text, link = build_hub(now)
+            img = os.path.join(IMG_DIR, "hub.jpg")
         else:
             camps = load_campaigns()
-            c = next((x for x in camps if x["q"] == pn), None) or camps[int(pn) % len(camps) if pn.isdigit() else 0]
-            text, link = build_campaign(c, now)
-        res = send_post(text, link)
+            i = next((k for k, x in enumerate(camps) if x["q"] == pn), None)
+            if i is None:
+                i = int(pn) % len(camps) if pn.isdigit() else 0
+            text, link = build_campaign(camps[i], now)
+            img = camp_image(i)
+        res = send_post(text, link, image=img)
         print("POST_NOW", "ok" if res.get("ok") else res)
         sys.exit(0 if res.get("ok") else 1)
 
@@ -388,8 +411,10 @@ def main():
         if st["queue"]:
             publish_next(st, now)                      # your own picks come first
         else:
+            img = None
             if slot in HUB_SLOTS:
                 text, link = build_hub(now)
+                img = os.path.join(IMG_DIR, "hub.jpg")
             else:
                 camps = load_campaigns()
                 text, link = (None, None)
@@ -397,7 +422,8 @@ def main():
                     i = st.get("camp_i", 0) % len(camps)
                     st["camp_i"] = i + 1
                     text, link = build_campaign(camps[i], now)
-            if text and send_post(text, link).get("ok"):
+                    img = camp_image(i)
+            if text and send_post(text, link, image=img).get("ok"):
                 st["last_post"] = now.isoformat()
                 st["total_posted"] += 1
     elif due(st, now) and len(st["queue"]) > 3:

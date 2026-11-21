@@ -135,7 +135,7 @@ def parse_deal(text):
         return None, "❌ مش قادر أقرا اللينك ده. ابعت لينك منتج من أمازون إيطاليا."
     asin = am.group(1).upper()
 
-    title, new_p, old_p = "", None, None
+    title, hook, new_p, old_p = "", "", None, None
     # lines typed after the link come first (your Arabic title), Amazon's share text last
     before = re.sub(r"(?i)(guarda|dai un'occhiata a|scopri)[^:]*:?", "", text[:m.start()])
     rest = text[m.end():].splitlines() + before.splitlines()
@@ -149,10 +149,13 @@ def parse_deal(text):
             if b is not None and b < a:
                 a, b = b, a
             new_p, old_p = a, b
-        elif not title and not line.lower().startswith("http"):
-            # ignore Amazon's auto text in shares like "Guarda questo prodotto su Amazon"
-            title = line[:120]
-    return {"asin": asin, "title": title, "new": new_p, "old": old_p}, None
+        elif not line.lower().startswith("http"):
+            # line 2 = Arabic title, line 3 = selling hook (why people want it)
+            if not title:
+                title = line[:120]
+            elif not hook:
+                hook = line[:200]
+    return {"asin": asin, "title": title, "hook": hook, "new": new_p, "old": old_p}, None
 
 
 # ---------------- post formatting ----------------
@@ -170,7 +173,11 @@ def is_bf(now):
 
 
 def bf_line(now):
-    return "🖤 <b>بلاك فرايداي على أمازون إيطاليا</b>\n" if is_bf(now) else ""
+    if is_bf(now):
+        return "🖤 <b>بلاك فرايداي على أمازون إيطاليا</b>\n"
+    if now.month == 12 and now.day <= 24:
+        return "🎄 <b>عروض الكريسماس — جهّز هداياك بدري</b>\n"
+    return ""
 
 
 def build_post(d, now):
@@ -181,6 +188,7 @@ def build_post(d, now):
     lines = [
         bf_line(now) + f"🔥 <b>{title}</b>",
         "",
+        *( [f"✅ {html.escape(d['hook'])}"] if d.get("hook") else [] ),
         "💸 عليه خصم دلوقتي على أمازون إيطاليا",
         "🚚 توصيل سريع لحد البيت • إرجاع سهل",
         "",
@@ -293,12 +301,7 @@ def send_product(d, text, link):
     """Product post = big real product photo + caption + a buy button. Falls back to a text post."""
     kb = {"inline_keyboard": [[{"text": "🛒 شوف السعر واطلب من أمازون", "url": link}]]}
     img = product_image(d["asin"])
-    try:   # make sure Amazon returns a real photo (not a 1x1 placeholder) before posting it
-        r = requests.get(img, timeout=20, headers={"User-Agent": "Mozilla/5.0"})
-        real = r.ok and r.headers.get("Content-Type", "").startswith("image/jpeg") and len(r.content) > 3000
-    except requests.RequestException:
-        real = False
-    if real:
+    if real_photo(d["asin"]):   # a real photo, not Amazon's 1x1 placeholder
         res = tg("sendPhoto", chat_id=CHANNEL, photo=img, caption=text, parse_mode="HTML", reply_markup=kb)
         if res.get("ok"):
             return res
@@ -309,10 +312,51 @@ def send_product(d, text, link):
               link_preview_options={"url": link, "prefer_large_media": True, "show_above_text": True})
 
 
+def real_photo(asin):
+    try:
+        r = requests.get(product_image(asin), timeout=20, headers={"User-Agent": "Mozilla/5.0"})
+        return r.ok and r.headers.get("Content-Type", "").startswith("image/jpeg") and len(r.content) > 3000
+    except requests.RequestException:
+        return False
+
+
+NUM = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣", "🔟"]
+
+
+def send_album(a, now):
+    """Themed collection: up to 10 real product photos in one post, numbered links in the caption."""
+    items = [it for it in a["items"] if real_photo(it["asin"])][:10]
+    if len(items) < 2:
+        res = {"ok": False, "description": "مفيش صور كفاية للمجموعة"}
+        for it in a["items"]:
+            text, link = build_post(it, now)
+            res = send_product(it, text, link)
+        return res
+    lines = [bf_line(now) + f"<b>{html.escape(a['title'])}</b>", ""]
+    for i, it in enumerate(items):
+        lines.append(f"{NUM[i]} <a href=\"{affiliate_link(it['asin'])}\">{html.escape(it['title'] or 'منتج')}</a>")
+    lines += ["", "👆 دوس على اسم المنتج يفتحلك على أمازون", "⏳ الخصومات لفترة محدودة", "#عروض #adv"]
+    caption = "\n".join(lines)[:1024]
+    media = [{"type": "photo", "media": product_image(it["asin"])} for it in items]
+    media[0].update({"caption": caption, "parse_mode": "HTML"})
+    return tg("sendMediaGroup", chat_id=CHANNEL, media=media)
+
+
 def publish_next(st, now):
     if not st["queue"]:
         return False
     d = st["queue"].pop(0)
+    if d.get("type") == "album":
+        res = send_album(d, now)
+        if res.get("ok"):
+            st["last_post"] = now.isoformat()
+            st["posted"] = (st["posted"] + [it["asin"] for it in d["items"]])[-300:]
+            st["total_posted"] += 1
+            return True
+        st["queue"].insert(0, d)
+        if st.get("admin_id"):
+            reply(st["admin_id"], f"⚠️ فشل نشر المجموعة: {res.get('description')}")
+        return False
     text, link = build_post(d, now)
     res = send_product(d, text, link)
     if res.get("ok"):
@@ -343,6 +387,9 @@ def queue_text(st):
         return "الطابور فاضي. ابعت لينكات 👍"
     out = [f"📋 في الطابور {len(st['queue'])} عرض:"]
     for i, d in enumerate(st["queue"], 1):
+        if d.get("type") == "album":
+            out.append(f"{i}. 🗂 مجموعة: {d['title']} ({len(d['items'])} منتج)")
+            continue
         p = f" – {fmt_price(d['new'])}€" if d.get("new") else ""
         out.append(f"{i}. {d['title'] or d['asin']}{p}")
     return "\n".join(out)
@@ -370,6 +417,21 @@ def handle(st, msg, now):
         reply(chat_id, HELP)
     elif cmd == "/queue":
         reply(chat_id, queue_text(st))
+    elif cmd == "/album":
+        lines = text.splitlines()
+        title = lines[0][len("/album"):].strip() or "🔥 مجموعة عروض"
+        items = []
+        for ln in lines[1:]:
+            link_part, _, name = ln.partition("|")
+            dl, err = parse_deal(link_part.strip())
+            if dl:
+                dl["title"] = name.strip()[:80]
+                items.append(dl)
+        if len(items) < 2:
+            reply(chat_id, "اكتب المجموعة كده:\n/album 🎄 هدايا تحت 20€\nلينك | اسم المنتج\nلينك | اسم المنتج")
+        else:
+            st["queue"].append({"type": "album", "title": title, "items": items[:10], "asin": "album"})
+            reply(chat_id, f"✅ المجموعة اتضافت للطابور ({len(items[:10])} منتج).")
     elif cmd == "/now":
         ok = publish_next(st, now)
         reply(chat_id, "✅ اتنشر في القناة" if ok else "مفيش حاجة اتنشرت (الطابور فاضي أو حصل خطأ).")

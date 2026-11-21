@@ -184,7 +184,7 @@ def build_post(d, now):
         "💸 عليه خصم دلوقتي على أمازون إيطاليا",
         "🚚 توصيل سريع لحد البيت • إرجاع سهل",
         "",
-        f"👈 <a href=\"{link}\">شوف الخصم واطلب من هنا</a>",
+        f"👇 <a href=\"{link}\">شوف الخصم واطلب من هنا</a>",
         "",
         "⏳ الخصم لفترة محدودة",
         "#عروض #adv",
@@ -282,13 +282,39 @@ def camp_image(i):
     return os.path.join(IMG_DIR, f"c{i:02d}.jpg")
 
 
+def product_image(asin):
+    """Amazon's official Associates image link (the SiteStripe "Image" link): the real product
+    photo, served by Amazon itself for the ASIN, with our tag."""
+    return ("https://ws-eu.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=IT"
+            f"&ASIN={asin}&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL500_&tag={TAG}")
+
+
+def send_product(d, text, link):
+    """Product post = big real product photo + caption + a buy button. Falls back to a text post."""
+    kb = {"inline_keyboard": [[{"text": "🛒 شوف السعر واطلب من أمازون", "url": link}]]}
+    img = product_image(d["asin"])
+    try:   # make sure Amazon returns a real photo (not a 1x1 placeholder) before posting it
+        r = requests.get(img, timeout=20, headers={"User-Agent": "Mozilla/5.0"})
+        real = r.ok and r.headers.get("Content-Type", "").startswith("image/jpeg") and len(r.content) > 3000
+    except requests.RequestException:
+        real = False
+    if real:
+        res = tg("sendPhoto", chat_id=CHANNEL, photo=img, caption=text, parse_mode="HTML", reply_markup=kb)
+        if res.get("ok"):
+            return res
+        print(f"[telegram] product photo failed: {res.get('description')}", file=sys.stderr)
+    else:
+        print(f"[amazon] no real photo for {d['asin']}, sending text post", file=sys.stderr)
+    return tg("sendMessage", chat_id=CHANNEL, text=text, parse_mode="HTML", reply_markup=kb,
+              link_preview_options={"url": link, "prefer_large_media": True, "show_above_text": True})
+
+
 def publish_next(st, now):
     if not st["queue"]:
         return False
     d = st["queue"].pop(0)
     text, link = build_post(d, now)
-    res = tg("sendMessage", chat_id=CHANNEL, text=text, parse_mode="HTML",
-             link_preview_options={"url": link, "prefer_large_media": True, "show_above_text": True})
+    res = send_product(d, text, link)
     if res.get("ok"):
         st["last_post"] = now.isoformat()
         st["posted"] = (st["posted"] + [d["asin"]])[-300:]
@@ -411,21 +437,12 @@ def main():
         if st["queue"]:
             publish_next(st, now)                      # your own picks come first
         else:
-            img = None
-            if slot in HUB_SLOTS:
-                text, link = build_hub(now)
-                img = os.path.join(IMG_DIR, "hub.jpg")
-            else:
-                camps = load_campaigns()
-                text, link = (None, None)
-                if camps:
-                    i = st.get("camp_i", 0) % len(camps)
-                    st["camp_i"] = i + 1
-                    text, link = build_campaign(camps[i], now)
-                    img = camp_image(i)
-            if text and send_post(text, link, image=img).get("ok"):
-                st["last_post"] = now.isoformat()
-                st["total_posted"] += 1
+            # only real products are posted; with an empty queue we remind the admin (once a day)
+            today = now.strftime("%Y-%m-%d")
+            if st.get("admin_id") and st.get("empty_note") != today:
+                st["empty_note"] = today
+                reply(st["admin_id"], "📭 طابور العروض فاضي، ومش هنشر صور رمزية.\n"
+                                      "ابعتلي لينكات منتجات من أمازون (زرار مشاركة) وأنا أنزلها بصورتها الحقيقية.")
     elif due(st, now) and len(st["queue"]) > 3:
         publish_next(st, now)                          # long queue: also post between slots
 

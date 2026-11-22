@@ -1,7 +1,113 @@
 {
- "offset": 484304911,
- "queue": [],
- "last_post": "2026-11-20T22:15:55.406359+01:00",
+ "offset": 484304926,
+ "queue": [
+  {
+   "asin": "B09B8X9RGM",
+   "title": "سماعة Echo Dot (موديل 2022) مع Alexa 🔊",
+   "hook": "شغّل القرآن والأغاني والأخبار بصوتك من غير ما تمسك موبايل، وبخصم أكتر من النص",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0F2N529Z1",
+   "title": "كبسولات غسالة أطباق Fairy Platinum (140 كبسولة) 🍽️",
+   "hook": "مخزون شهور للمطبخ بخصم كبير — بتشيل الدهون الصعبة من أول غسلة",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0FMYTVQ5X",
+   "title": "سائل غسيل Omino Bianco (3 عبوات كبيرة + هدية) 🧺",
+   "hook": "غسيل العيلة كله بريحة المسك الأبيض، وعبوات كبيرة بتكفّي شهور بخصم حلو",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0C5J61HYJ",
+   "title": "معجون أسنان Colgate Triple Action (12 أنبوبة) 🦷",
+   "hook": "مخزون السنة للعيلة كلها بخصم أكتر من النص — حماية من التسوس ونَفَس منعش",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B075FC8ZJ3",
+   "title": "غلاية مياه Philips Daily (1.7 لتر) ☕",
+   "hook": "تغلي المية في ثواني للشاي والقهوة، ستانلس ستيل وفلتر ضد الجير — بخصم أكتر من النص",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0D6MJ917M",
+   "title": "علبة هدية شموع Yankee Candle (6 شموع) 🕯️",
+   "hook": "هدية جاهزة وشيك للكريسماس أو لحد بتحبه، وريحة حلوة في البيت كله",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0BQC62WHK",
+   "title": "لعبة Cluedo من Hasbro 🕵️",
+   "hook": "سهرة عيلية من غير موبايلات في ليالي الشتا الطويلة — هدية ممتازة للعيال من 8 سنين",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0DTTN4H6K",
+   "title": "ماكينة حلاقة Gillette Fusion5 + 8 شفرات 🪒",
+   "hook": "طقم حلاقة كامل بخصم أكتر من النص — حلاقة ناعمة من غير جروح وهدية حلوة للراجل",
+   "new": null,
+   "old": null
+  },
+  {
+   "type": "album",
+   "title": "🔥 دفّي بيتك في الشتا",
+   "items": [
+    {
+     "asin": "B0987C1JFD",
+     "title": "دفاية سيراميك Imetec Ceramic Compact",
+     "hook": "",
+     "new": null,
+     "old": null
+    },
+    {
+     "asin": "B001G61H7M",
+     "title": "دفاية De'Longhi HCM2030",
+     "hook": "",
+     "new": null,
+     "old": null
+    },
+    {
+     "asin": "B07Y8GR1WS",
+     "title": "مفرش سرير بالكهربا Imetec Adapto",
+     "hook": "",
+     "new": null,
+     "old": null
+    },
+    {
+     "asin": "B0BLCXY3J8",
+     "title": "بطانية بالكهربا Imetec CaldoPlaid",
+     "hook": "",
+     "new": null,
+     "old": null
+    },
+    {
+     "asin": "B09CTZF711",
+     "title": "وسادة تدفئة Imetec للضهر والبطن",
+     "hook": "",
+     "new": null,
+     "old": null
+    }
+   ],
+   "asin": "album"
+  },
+  {
+   "asin": "B0F3BDBWK2",
+   "title": "كاميرا مراقبة Blink Mini 2K+ (أحدث موديل) 📹",
+   "hook": "شوف بيتك وعيالك من الموبايل وانت في الشغل، رؤية ليلية بالألوان وخصم أكتر من النص",
+   "new": null,
+   "old": null
+  }
+ ],
+ "last_post": "2026-11-22T22:21:15.939491+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
@@ -17,11 +123,12 @@
   "B09HV58YR5",
   "B0DWNGD34L",
   "B07Q6Y5SC7",
-  "B0DWXVSX62"
+  "B0DWXVSX62",
+  "B0DJGCX6Q2"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-22",
- "total_posted": 46,
+ "total_posted": 47,
  "camp_i": 1,
  "last_slot": "2026-11-22 22:15",
  "empty_note": "2026-11-22"

@@ -2,13 +2,6 @@
  "offset": 484304926,
  "queue": [
   {
-   "asin": "B0DTTN4H6K",
-   "title": "ماكينة حلاقة Gillette Fusion5 + 8 شفرات 🪒",
-   "hook": "طقم حلاقة كامل بخصم أكتر من النص — حلاقة ناعمة من غير جروح وهدية حلوة للراجل",
-   "new": null,
-   "old": null
-  },
-  {
    "type": "album",
    "title": "🔥 دفّي بيتك في الشتا",
    "items": [
@@ -58,7 +51,7 @@
    "old": null
   }
  ],
- "last_post": "2026-11-23T15:00:13.808406+01:00",
+ "last_post": "2026-11-23T16:30:51.637731+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
@@ -82,12 +75,13 @@
   "B0C5J61HYJ",
   "B075FC8ZJ3",
   "B0D6MJ917M",
-  "B0BQC62WHK"
+  "B0BQC62WHK",
+  "B0DTTN4H6K"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-23",
- "total_posted": 54,
+ "total_posted": 55,
  "camp_i": 1,
- "last_slot": "2026-11-23 15:00",
+ "last_slot": "2026-11-23 16:30",
  "empty_note": "2026-11-22"
 }

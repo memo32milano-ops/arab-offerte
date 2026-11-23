@@ -2,13 +2,6 @@
  "offset": 484304926,
  "queue": [
   {
-   "asin": "B0FMYTVQ5X",
-   "title": "سائل غسيل Omino Bianco (3 عبوات كبيرة + هدية) 🧺",
-   "hook": "غسيل العيلة كله بريحة المسك الأبيض، وعبوات كبيرة بتكفّي شهور بخصم حلو",
-   "new": null,
-   "old": null
-  },
-  {
    "asin": "B0C5J61HYJ",
    "title": "معجون أسنان Colgate Triple Action (12 أنبوبة) 🦷",
    "hook": "مخزون السنة للعيلة كلها بخصم أكتر من النص — حماية من التسوس ونَفَس منعش",
@@ -93,7 +86,7 @@
    "old": null
   }
  ],
- "last_post": "2026-11-23T08:40:53.915522+01:00",
+ "last_post": "2026-11-23T09:00:10.506429+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
@@ -112,12 +105,13 @@
   "B0DWXVSX62",
   "B0DJGCX6Q2",
   "B09B8X9RGM",
-  "B0F2N529Z1"
+  "B0F2N529Z1",
+  "B0FMYTVQ5X"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-23",
- "total_posted": 49,
+ "total_posted": 50,
  "camp_i": 1,
- "last_slot": "2026-11-22 22:15",
+ "last_slot": "2026-11-23 09:00",
  "empty_note": "2026-11-22"
 }

@@ -2,13 +2,6 @@
  "offset": 484304926,
  "queue": [
   {
-   "asin": "B0D6MJ917M",
-   "title": "علبة هدية شموع Yankee Candle (6 شموع) 🕯️",
-   "hook": "هدية جاهزة وشيك للكريسماس أو لحد بتحبه، وريحة حلوة في البيت كله",
-   "new": null,
-   "old": null
-  },
-  {
    "asin": "B0BQC62WHK",
    "title": "لعبة Cluedo من Hasbro 🕵️",
    "hook": "سهرة عيلية من غير موبايلات في ليالي الشتا الطويلة — هدية ممتازة للعيال من 8 سنين",
@@ -72,7 +65,7 @@
    "old": null
   }
  ],
- "last_post": "2026-11-23T12:00:37.197246+01:00",
+ "last_post": "2026-11-23T13:30:48.699963+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
@@ -94,12 +87,13 @@
   "B0F2N529Z1",
   "B0FMYTVQ5X",
   "B0C5J61HYJ",
-  "B075FC8ZJ3"
+  "B075FC8ZJ3",
+  "B0D6MJ917M"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-23",
- "total_posted": 52,
+ "total_posted": 53,
  "camp_i": 1,
- "last_slot": "2026-11-23 12:00",
+ "last_slot": "2026-11-23 13:30",
  "empty_note": "2026-11-22"
 }

@@ -1,7 +1,120 @@
 {
- "offset": 484304926,
- "queue": [],
- "last_post": "2026-11-23T19:30:38.817175+01:00",
+ "offset": 484304938,
+ "queue": [
+  {
+   "asin": "B0B6GKNJPR",
+   "title": "كاميرا Ring Indoor Camera (الجيل التاني)",
+   "hook": "طمّن على العيال أو الحيوان الأليف من الموبايل وانت في الشغل، وفيها غطا للخصوصية – بنص التمن",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0C5QXCP7Z",
+   "title": "كاميرا خارجية Ring Stick Up Cam بالبطارية",
+   "hook": "راقب باب البيت والجنينة من غير أسلاك ولا فني تركيب، وبتكلم اللي على الباب من الموبايل – خصم أكتر من النص",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B09B2S8WKD",
+   "title": "شاشة Echo Show 5 (أحدث موديل) مع Alexa",
+   "hook": "منبّه وساعة وقرآن ومكالمات فيديو مع الأهل في شاشة صغيرة جنب السرير – خصم قرب النص",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0DP1VG1DZ",
+   "title": "رؤوس فرشاة Oral-B iO Ultimate Clean الأصلية (10 قطع)",
+   "hook": "مخزون سنة كاملة لكل العيلة من الرؤوس الأصلية بأقل من سعرها المعتاد بكتير",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0DBF65JYY",
+   "title": "سيروم medicube PDRN Pink Peptide",
+   "hook": "السيروم الكوري اللي مكسّر الدنيا: ترطيب ونضارة للبشرة في الشتا الناشف – بخصم كبير عن سعره العادي",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B00NTCH52W",
+   "title": "بطاريات Amazon Basics قلوية (20 بطارية)",
+   "hook": "ريموتات ولعب العيال وساعات البيت كلها – خزّن دلوقتي قبل هدايا الكريسماس بخصم حلو",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0CMD922SQ",
+   "title": "ماكينة قهوة Nescafé Dolce Gusto Genio S من De'Longhi",
+   "hook": "إسبريسو وكابتشينو وشاي باللبن بكبسولة وزرار واحد – هدية حلوة للبيت بخصم Black Friday",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B01BBW9Q46",
+   "title": "كبسولات قهوة Caffè Borbone Don Carlo Rossa (100 كبسولة) لماكينة A Modo Mio",
+   "hook": "أكتر قهوة بيشتريها الطليان، مخزون شهور بخصم ربع التمن",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B01MTF06KN",
+   "title": "مكنسة Philips PowerPro Compact من غير أكياس",
+   "hook": "شفط قوي وفلتر HEPA للتراب والحساسية، ومش هتشتري أكياس تاني أبداً – خصم قرب النص",
+   "new": null,
+   "old": null
+  },
+  {
+   "type": "album",
+   "title": "🎄 هدايا الكريسماس للولاد",
+   "items": [
+    {
+     "asin": "B0BN15GCB7",
+     "title": "حلبة Hot Wheels ديناصور Mega Dino",
+     "hook": "",
+     "new": null,
+     "old": null
+    },
+    {
+     "asin": "B0G4WS5JKH",
+     "title": "لعبة Forza 4 من Hasbro",
+     "hook": "",
+     "new": null,
+     "old": null
+    },
+    {
+     "asin": "B0C3528VHM",
+     "title": "صلصال Play-Doh ماكينة السموزي",
+     "hook": "",
+     "new": null,
+     "old": null
+    },
+    {
+     "asin": "B07N8Z8F62",
+     "title": "ألوان STABILO Pen 68 (25 لون)",
+     "hook": "",
+     "new": null,
+     "old": null
+    },
+    {
+     "asin": "B07W7FLKRW",
+     "title": "مكعب Shashibo المغناطيسي",
+     "hook": "",
+     "new": null,
+     "old": null
+    },
+    {
+     "asin": "B01G7DREPM",
+     "title": "شنطة تلوين وأختام Multiprint",
+     "hook": "",
+     "new": null,
+     "old": null
+    }
+   ],
+   "asin": "album"
+  }
+ ],
+ "last_post": "2026-11-25T19:01:47.429994+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
@@ -32,11 +145,12 @@
   "B07Y8GR1WS",
   "B0BLCXY3J8",
   "B09CTZF711",
-  "B0F3BDBWK2"
+  "B0F3BDBWK2",
+  "B0GSH6FCBN"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-25",
- "total_posted": 57,
+ "total_posted": 58,
  "camp_i": 1,
  "last_slot": "2026-11-25 18:00",
  "empty_note": "2026-11-25"

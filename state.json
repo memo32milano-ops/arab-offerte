@@ -2,13 +2,6 @@
  "offset": 484304938,
  "queue": [
   {
-   "asin": "B09B2S8WKD",
-   "title": "شاشة Echo Show 5 (أحدث موديل) مع Alexa",
-   "hook": "منبّه وساعة وقرآن ومكالمات فيديو مع الأهل في شاشة صغيرة جنب السرير – خصم قرب النص",
-   "new": null,
-   "old": null
-  },
-  {
    "asin": "B0DP1VG1DZ",
    "title": "رؤوس فرشاة Oral-B iO Ultimate Clean الأصلية (10 قطع)",
    "hook": "مخزون سنة كاملة لكل العيلة من الرؤوس الأصلية بأقل من سعرها المعتاد بكتير",
@@ -100,7 +93,7 @@
    "asin": "album"
   }
  ],
- "last_post": "2026-11-25T20:10:54.454817+01:00",
+ "last_post": "2026-11-25T21:00:56.314538+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
@@ -134,12 +127,13 @@
   "B0F3BDBWK2",
   "B0GSH6FCBN",
   "B0B6GKNJPR",
-  "B0C5QXCP7Z"
+  "B0C5QXCP7Z",
+  "B09B2S8WKD"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-25",
- "total_posted": 60,
+ "total_posted": 61,
  "camp_i": 1,
- "last_slot": "2026-11-25 19:30",
+ "last_slot": "2026-11-25 21:00",
  "empty_note": "2026-11-25"
 }

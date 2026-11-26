@@ -2,13 +2,6 @@
  "offset": 484304938,
  "queue": [
   {
-   "asin": "B01BBW9Q46",
-   "title": "كبسولات قهوة Caffè Borbone Don Carlo Rossa (100 كبسولة) لماكينة A Modo Mio",
-   "hook": "أكتر قهوة بيشتريها الطليان، مخزون شهور بخصم ربع التمن",
-   "new": null,
-   "old": null
-  },
-  {
    "asin": "B01MTF06KN",
    "title": "مكنسة Philips PowerPro Compact من غير أكياس",
    "hook": "شفط قوي وفلتر HEPA للتراب والحساسية، ومش هتشتري أكياس تاني أبداً – خصم قرب النص",
@@ -65,7 +58,7 @@
    "asin": "album"
   }
  ],
- "last_post": "2026-11-26T10:30:56.918847+01:00",
+ "last_post": "2026-11-26T12:00:43.674721+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
@@ -104,12 +97,13 @@
   "B0DP1VG1DZ",
   "B0DBF65JYY",
   "B00NTCH52W",
-  "B0CMD922SQ"
+  "B0CMD922SQ",
+  "B01BBW9Q46"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-26",
- "total_posted": 65,
+ "total_posted": 66,
  "camp_i": 1,
- "last_slot": "2026-11-26 10:30",
+ "last_slot": "2026-11-26 12:00",
  "empty_note": "2026-11-25"
 }

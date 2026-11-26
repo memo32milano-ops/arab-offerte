@@ -2,13 +2,6 @@
  "offset": 484304938,
  "queue": [
   {
-   "asin": "B0CMD922SQ",
-   "title": "ماكينة قهوة Nescafé Dolce Gusto Genio S من De'Longhi",
-   "hook": "إسبريسو وكابتشينو وشاي باللبن بكبسولة وزرار واحد – هدية حلوة للبيت بخصم Black Friday",
-   "new": null,
-   "old": null
-  },
-  {
    "asin": "B01BBW9Q46",
    "title": "كبسولات قهوة Caffè Borbone Don Carlo Rossa (100 كبسولة) لماكينة A Modo Mio",
    "hook": "أكتر قهوة بيشتريها الطليان، مخزون شهور بخصم ربع التمن",
@@ -72,7 +65,7 @@
    "asin": "album"
   }
  ],
- "last_post": "2026-11-26T09:00:13.740659+01:00",
+ "last_post": "2026-11-26T10:30:56.918847+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
@@ -110,12 +103,13 @@
   "B09B2S8WKD",
   "B0DP1VG1DZ",
   "B0DBF65JYY",
-  "B00NTCH52W"
+  "B00NTCH52W",
+  "B0CMD922SQ"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-26",
- "total_posted": 64,
+ "total_posted": 65,
  "camp_i": 1,
- "last_slot": "2026-11-26 09:00",
+ "last_slot": "2026-11-26 10:30",
  "empty_note": "2026-11-25"
 }

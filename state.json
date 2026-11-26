@@ -1,7 +1,99 @@
 {
- "offset": 484304938,
- "queue": [],
- "last_post": "2026-11-26T15:00:25.938191+01:00",
+ "offset": 484304950,
+ "queue": [
+  {
+   "asin": "B0GCMNN2ZQ",
+   "title": "🦷 فرشتين أسنان كهربا Oral-B iO 3 + 4 رؤوس",
+   "hook": "فرشة ليك وفرشة لشريك حياتك بخصم 68% – وهدية كريسماس محترمة",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0FNWCYLZN",
+   "title": "🎧 سماعات Soundcore P31i من Anker",
+   "hook": "عزل ضوضاء وبطارية 50 ساعة للمترو والشغل – خصم 64% وهدية تفرّح أي حد",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0C2S2J7JP",
+   "title": "⏰ منبه ذكي Amazon Echo Spot مع Alexa",
+   "hook": "منبه + سبيكر + أليكسا جنب السرير – خصم 58% من أقوى عروض البلاك فرايداي",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0FBB4KS23",
+   "title": "🎁 تقويم الكريسماس NIVEA Beauty – 24 هدية",
+   "hook": "24 مفاجأة عناية للمدام أو البنات لحد الكريسماس – خصم 46% وبيخلص بسرعة",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0874WYB4Z",
+   "title": "☕ كبسولات Gimoka Gusto Deciso – 100 كبسولة (متوافقة مع Nespresso)",
+   "hook": "قهوة الصبح لشهور قدام – خصم 41% عن سعرها المعتاد، خزّن قبل ما العرض يخلص",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0BMLWPDJJ",
+   "title": "🧴 بخاخ مطهّر Oust 3 في 1 – 3 عبوات",
+   "hook": "يطهّر الكنب والمراتب ويشيل ريحة الأكل والدخان من البيت المقفول في الشتا – خصم 37%",
+   "new": null,
+   "old": null
+  },
+  {
+   "asin": "B0DMTVGZL3",
+   "title": "🔔 Ring Intercom Video – الإنتركم الذكي",
+   "hook": "افتح باب العمارة للدليفري من موبايلك وانت في الشغل – تركيب سهل وخصم 52%",
+   "new": null,
+   "old": null
+  },
+  {
+   "type": "album",
+   "title": "🔥 دفّي نفسك وبيتك في الشتا",
+   "items": [
+    {
+     "asin": "B09CTZV4TM",
+     "title": "مخدة تدفئة للرقبة والكتف Imetec",
+     "hook": "",
+     "new": null,
+     "old": null
+    },
+    {
+     "asin": "B0FQC896VL",
+     "title": "مخدة تدفئة لاسلكي Beurer Heaty",
+     "hook": "",
+     "new": null,
+     "old": null
+    },
+    {
+     "asin": "B0FP5579M9",
+     "title": "سكارف بيسخن Imetec بالباور بانك",
+     "hook": "",
+     "new": null,
+     "old": null
+    },
+    {
+     "asin": "B08BLSKRF2",
+     "title": "طاقية صوف ميرينو Danish Endurance",
+     "hook": "",
+     "new": null,
+     "old": null
+    },
+    {
+     "asin": "B07ZPTZ2GH",
+     "title": "ماسك رقبة شتوي ROCKBROS للموتوسيكل والعجلة",
+     "hook": "",
+     "new": null,
+     "old": null
+    }
+   ],
+   "asin": "album"
+  }
+ ],
+ "last_post": "2026-11-26T19:13:17.800283+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
@@ -48,11 +140,12 @@
   "B0C3528VHM",
   "B07N8Z8F62",
   "B07W7FLKRW",
-  "B01G7DREPM"
+  "B01G7DREPM",
+  "B0BG53RQ9P"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-26",
- "total_posted": 68,
+ "total_posted": 69,
  "camp_i": 1,
  "last_slot": "2026-11-26 18:00",
  "empty_note": "2026-11-26"

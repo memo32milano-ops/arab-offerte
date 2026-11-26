@@ -2,13 +2,6 @@
  "offset": 484304938,
  "queue": [
   {
-   "asin": "B00NTCH52W",
-   "title": "بطاريات Amazon Basics قلوية (20 بطارية)",
-   "hook": "ريموتات ولعب العيال وساعات البيت كلها – خزّن دلوقتي قبل هدايا الكريسماس بخصم حلو",
-   "new": null,
-   "old": null
-  },
-  {
    "asin": "B0CMD922SQ",
    "title": "ماكينة قهوة Nescafé Dolce Gusto Genio S من De'Longhi",
    "hook": "إسبريسو وكابتشينو وشاي باللبن بكبسولة وزرار واحد – هدية حلوة للبيت بخصم Black Friday",
@@ -79,7 +72,7 @@
    "asin": "album"
   }
  ],
- "last_post": "2026-11-26T08:00:47.708269+01:00",
+ "last_post": "2026-11-26T09:00:13.740659+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
@@ -116,12 +109,13 @@
   "B0C5QXCP7Z",
   "B09B2S8WKD",
   "B0DP1VG1DZ",
-  "B0DBF65JYY"
+  "B0DBF65JYY",
+  "B00NTCH52W"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-26",
- "total_posted": 63,
+ "total_posted": 64,
  "camp_i": 1,
- "last_slot": "2026-11-25 22:15",
+ "last_slot": "2026-11-26 09:00",
  "empty_note": "2026-11-25"
 }

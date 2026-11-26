@@ -2,13 +2,6 @@
  "offset": 484304953,
  "queue": [
   {
-   "asin": "B0FNWCYLZN",
-   "title": "🎧 سماعات Soundcore P31i من Anker",
-   "hook": "عزل ضوضاء وبطارية 50 ساعة للمترو والشغل – خصم 64% وهدية تفرّح أي حد",
-   "new": null,
-   "old": null
-  },
-  {
    "asin": "B0C2S2J7JP",
    "title": "⏰ منبه ذكي Amazon Echo Spot مع Alexa",
    "hook": "منبه + سبيكر + أليكسا جنب السرير – خصم 58% من أقوى عروض البلاك فرايداي",
@@ -86,7 +79,7 @@
    "asin": "album"
   }
  ],
- "last_post": "2026-11-26T19:30:39.488318+01:00",
+ "last_post": "2026-11-26T21:00:05.093059+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
@@ -135,12 +128,13 @@
   "B07W7FLKRW",
   "B01G7DREPM",
   "B0BG53RQ9P",
-  "B0GCMNN2ZQ"
+  "B0GCMNN2ZQ",
+  "B0FNWCYLZN"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-26",
- "total_posted": 70,
+ "total_posted": 71,
  "camp_i": 1,
- "last_slot": "2026-11-26 19:30",
+ "last_slot": "2026-11-26 21:00",
  "empty_note": "2026-11-26"
 }

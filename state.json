@@ -2,13 +2,6 @@
  "offset": 484304953,
  "queue": [
   {
-   "asin": "B0GCMNN2ZQ",
-   "title": "🦷 فرشتين أسنان كهربا Oral-B iO 3 + 4 رؤوس",
-   "hook": "فرشة ليك وفرشة لشريك حياتك بخصم 68% – وهدية كريسماس محترمة",
-   "new": null,
-   "old": null
-  },
-  {
    "asin": "B0FNWCYLZN",
    "title": "🎧 سماعات Soundcore P31i من Anker",
    "hook": "عزل ضوضاء وبطارية 50 ساعة للمترو والشغل – خصم 64% وهدية تفرّح أي حد",
@@ -93,7 +86,7 @@
    "asin": "album"
   }
  ],
- "last_post": "2026-11-26T19:13:17.800283+01:00",
+ "last_post": "2026-11-26T19:30:39.488318+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
@@ -141,12 +134,13 @@
   "B07N8Z8F62",
   "B07W7FLKRW",
   "B01G7DREPM",
-  "B0BG53RQ9P"
+  "B0BG53RQ9P",
+  "B0GCMNN2ZQ"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-26",
- "total_posted": 69,
+ "total_posted": 70,
  "camp_i": 1,
- "last_slot": "2026-11-26 18:00",
+ "last_slot": "2026-11-26 19:30",
  "empty_note": "2026-11-26"
 }

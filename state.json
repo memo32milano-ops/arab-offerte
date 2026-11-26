@@ -2,13 +2,6 @@
  "offset": 484304938,
  "queue": [
   {
-   "asin": "B0DBF65JYY",
-   "title": "سيروم medicube PDRN Pink Peptide",
-   "hook": "السيروم الكوري اللي مكسّر الدنيا: ترطيب ونضارة للبشرة في الشتا الناشف – بخصم كبير عن سعره العادي",
-   "new": null,
-   "old": null
-  },
-  {
    "asin": "B00NTCH52W",
    "title": "بطاريات Amazon Basics قلوية (20 بطارية)",
    "hook": "ريموتات ولعب العيال وساعات البيت كلها – خزّن دلوقتي قبل هدايا الكريسماس بخصم حلو",
@@ -86,7 +79,7 @@
    "asin": "album"
   }
  ],
- "last_post": "2026-11-25T22:15:17.967438+01:00",
+ "last_post": "2026-11-26T08:00:47.708269+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
@@ -122,11 +115,12 @@
   "B0B6GKNJPR",
   "B0C5QXCP7Z",
   "B09B2S8WKD",
-  "B0DP1VG1DZ"
+  "B0DP1VG1DZ",
+  "B0DBF65JYY"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-26",
- "total_posted": 62,
+ "total_posted": 63,
  "camp_i": 1,
  "last_slot": "2026-11-25 22:15",
  "empty_note": "2026-11-25"

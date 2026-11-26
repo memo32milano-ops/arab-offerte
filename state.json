@@ -1,57 +1,7 @@
 {
  "offset": 484304938,
- "queue": [
-  {
-   "type": "album",
-   "title": "🎄 هدايا الكريسماس للولاد",
-   "items": [
-    {
-     "asin": "B0BN15GCB7",
-     "title": "حلبة Hot Wheels ديناصور Mega Dino",
-     "hook": "",
-     "new": null,
-     "old": null
-    },
-    {
-     "asin": "B0G4WS5JKH",
-     "title": "لعبة Forza 4 من Hasbro",
-     "hook": "",
-     "new": null,
-     "old": null
-    },
-    {
-     "asin": "B0C3528VHM",
-     "title": "صلصال Play-Doh ماكينة السموزي",
-     "hook": "",
-     "new": null,
-     "old": null
-    },
-    {
-     "asin": "B07N8Z8F62",
-     "title": "ألوان STABILO Pen 68 (25 لون)",
-     "hook": "",
-     "new": null,
-     "old": null
-    },
-    {
-     "asin": "B07W7FLKRW",
-     "title": "مكعب Shashibo المغناطيسي",
-     "hook": "",
-     "new": null,
-     "old": null
-    },
-    {
-     "asin": "B01G7DREPM",
-     "title": "شنطة تلوين وأختام Multiprint",
-     "hook": "",
-     "new": null,
-     "old": null
-    }
-   ],
-   "asin": "album"
-  }
- ],
- "last_post": "2026-11-26T13:30:32.345760+01:00",
+ "queue": [],
+ "last_post": "2026-11-26T15:00:25.938191+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
@@ -92,12 +42,18 @@
   "B00NTCH52W",
   "B0CMD922SQ",
   "B01BBW9Q46",
-  "B01MTF06KN"
+  "B01MTF06KN",
+  "B0BN15GCB7",
+  "B0G4WS5JKH",
+  "B0C3528VHM",
+  "B07N8Z8F62",
+  "B07W7FLKRW",
+  "B01G7DREPM"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-26",
- "total_posted": 67,
+ "total_posted": 68,
  "camp_i": 1,
- "last_slot": "2026-11-26 13:30",
+ "last_slot": "2026-11-26 15:00",
  "empty_note": "2026-11-25"
 }

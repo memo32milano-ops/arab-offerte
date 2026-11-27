@@ -2,13 +2,6 @@
  "offset": 484304965,
  "queue": [
   {
-   "asin": "B00O1XHJYW",
-   "title": "شنطة ظهر EASTPAK Out of Office – 27 لتر",
-   "hook": "الشنطة اللي بتعيش سنين – مكان للابتوب وضد الميه، للمدرسة أو الشغل، بخصم 54% وهدية حلوة للكريسماس",
-   "new": null,
-   "old": null
-  },
-  {
    "asin": "B0DQ8WV2PY",
    "title": "ماكينة ليبلات Brother PTN10 المحمولة",
    "hook": "رتّب برطمانات المطبخ وشنط وكشاكيل العيال للمدرسة في ثواني – بخصم 35% عن سعرها المعتاد",
@@ -79,7 +72,7 @@
    "asin": "album"
   }
  ],
- "last_post": "2026-11-27T19:30:55.134309+01:00",
+ "last_post": "2026-11-27T21:00:35.066396+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
@@ -143,12 +136,13 @@
   "B0GNN2W5S4",
   "B0HF1FPY2S",
   "B0DTTNBVGB",
-  "B0FFM4BY6C"
+  "B0FFM4BY6C",
+  "B00O1XHJYW"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-27",
- "total_posted": 81,
+ "total_posted": 82,
  "camp_i": 1,
- "last_slot": "2026-11-27 19:30",
+ "last_slot": "2026-11-27 21:00",
  "empty_note": "2026-11-27"
 }

@@ -2,13 +2,6 @@
  "offset": 484304965,
  "queue": [
   {
-   "asin": "B0HF1FPY2S",
-   "title": "كبسولات غسيل Dash Pods – 132 غسلة",
-   "hook": "كبسولة واحدة في الغسالة وخلاص – بتشيل البقع وريحتها حلوة، وعلبة تكفي شهور بخصم 36% عن سعرها المعتاد",
-   "new": null,
-   "old": null
-  },
-  {
    "asin": "B0DTTNBVGB",
    "title": "شفرات Gillette ProGlide – علبة 12 شفرة",
    "hook": "أنعم حلاقة من Gillette بخصم 59% – أكبر علبة تخلّيك مرتاح شهور ومن غير التهاب في الجلد",
@@ -100,7 +93,7 @@
    "asin": "album"
   }
  ],
- "last_post": "2026-11-27T17:49:03.750231+01:00",
+ "last_post": "2026-11-27T18:00:23.984710+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
@@ -161,12 +154,13 @@
   "B0FP5579M9",
   "B08BLSKRF2",
   "B07ZPTZ2GH",
-  "B0GNN2W5S4"
+  "B0GNN2W5S4",
+  "B0HF1FPY2S"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-27",
- "total_posted": 78,
+ "total_posted": 79,
  "camp_i": 1,
- "last_slot": "2026-11-27 16:30",
+ "last_slot": "2026-11-27 18:00",
  "empty_note": "2026-11-27"
 }

@@ -2,13 +2,6 @@
  "offset": 484304953,
  "queue": [
   {
-   "asin": "B0DMTVGZL3",
-   "title": "🔔 Ring Intercom Video – الإنتركم الذكي",
-   "hook": "افتح باب العمارة للدليفري من موبايلك وانت في الشغل – تركيب سهل وخصم 52%",
-   "new": null,
-   "old": null
-  },
-  {
    "type": "album",
    "title": "🔥 دفّي نفسك وبيتك في الشتا",
    "items": [
@@ -51,7 +44,7 @@
    "asin": "album"
   }
  ],
- "last_post": "2026-11-27T10:30:36.189465+01:00",
+ "last_post": "2026-11-27T12:00:04.275889+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
@@ -105,12 +98,13 @@
   "B0C2S2J7JP",
   "B0FBB4KS23",
   "B0874WYB4Z",
-  "B0BMLWPDJJ"
+  "B0BMLWPDJJ",
+  "B0DMTVGZL3"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-27",
- "total_posted": 75,
+ "total_posted": 76,
  "camp_i": 1,
- "last_slot": "2026-11-27 10:30",
+ "last_slot": "2026-11-27 12:00",
  "empty_note": "2026-11-26"
 }

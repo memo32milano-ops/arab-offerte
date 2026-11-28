@@ -1,43 +1,7 @@
 {
  "offset": 484304965,
- "queue": [
-  {
-   "type": "album",
-   "title": "☕ مشروبات الشتا السخنة في ثانية – Dolce Gusto",
-   "items": [
-    {
-     "asin": "B075RGRL51",
-     "title": "شوكلاتة سخنة Chococino – 96 كبسولة",
-     "hook": "",
-     "new": null,
-     "old": null
-    },
-    {
-     "asin": "B07BLF945D",
-     "title": "كابتشينو باللبن Dolce Gusto – 96 كبسولة",
-     "hook": "",
-     "new": null,
-     "old": null
-    },
-    {
-     "asin": "B07MZYR3TY",
-     "title": "اسبريسو Napoli القوي – 96 كبسولة",
-     "hook": "",
-     "new": null,
-     "old": null
-    },
-    {
-     "asin": "B0H7T17554",
-     "title": "ماكينة Dolce Gusto Piccolo XL من De'Longhi",
-     "hook": "",
-     "new": null,
-     "old": null
-    }
-   ],
-   "asin": "album"
-  }
- ],
- "last_post": "2026-11-28T12:00:16.554758+01:00",
+ "queue": [],
+ "last_post": "2026-11-28T13:30:56.619659+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
@@ -107,12 +71,16 @@
   "B016MPSUJO",
   "B0GMKJ4MK3",
   "B0BSXJPWM6",
-  "B0756D8W87"
+  "B0756D8W87",
+  "B075RGRL51",
+  "B07BLF945D",
+  "B07MZYR3TY",
+  "B0H7T17554"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-28",
- "total_posted": 87,
+ "total_posted": 88,
  "camp_i": 1,
- "last_slot": "2026-11-28 12:00",
+ "last_slot": "2026-11-28 13:30",
  "empty_note": "2026-11-27"
 }

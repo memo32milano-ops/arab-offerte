@@ -2,13 +2,6 @@
  "offset": 484304965,
  "queue": [
   {
-   "asin": "B0756D8W87",
-   "title": "شماعات هدوم قطيفة Amazon Basics – 50 شماعة",
-   "hook": "رفيعة ومابتزحلقش – دولابك يسيع الضعف وهدوم الشتا التقيلة ماتوقعش على الأرض، بخصم 30% عن سعرها المعتاد",
-   "new": null,
-   "old": null
-  },
-  {
    "type": "album",
    "title": "☕ مشروبات الشتا السخنة في ثانية – Dolce Gusto",
    "items": [
@@ -44,7 +37,7 @@
    "asin": "album"
   }
  ],
- "last_post": "2026-11-28T10:30:39.003185+01:00",
+ "last_post": "2026-11-28T12:00:16.554758+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
@@ -113,12 +106,13 @@
   "B0DQ8WV2PY",
   "B016MPSUJO",
   "B0GMKJ4MK3",
-  "B0BSXJPWM6"
+  "B0BSXJPWM6",
+  "B0756D8W87"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-28",
- "total_posted": 86,
+ "total_posted": 87,
  "camp_i": 1,
- "last_slot": "2026-11-28 10:30",
+ "last_slot": "2026-11-28 12:00",
  "empty_note": "2026-11-27"
 }

@@ -2,13 +2,6 @@
  "offset": 484304965,
  "queue": [
   {
-   "asin": "B016MPSUJO",
-   "title": "شمعة Yankee Candle الكبيرة – Red Apple Wreath",
-   "hook": "ريحة تفاح وقرفة تملا البيت جو كريسماس – بتولّع 150 ساعة وهدية شيك بخصم 43%",
-   "new": null,
-   "old": null
-  },
-  {
    "asin": "B0GMKJ4MK3",
    "title": "سماعة Amazon Echo Dot الجديدة مع Alexa",
    "hook": "قرآن وأغاني وراديو بصوتك وتشغّل النور والدفاية من غير ما تقوم – أقوى خصم 48% في البلاك فرايداي",
@@ -65,7 +58,7 @@
    "asin": "album"
   }
  ],
- "last_post": "2026-11-27T22:15:36.707195+01:00",
+ "last_post": "2026-11-28T08:00:36.091672+01:00",
  "posted": [
   "B0FC2LC44J",
   "B0976YC7BM",
@@ -131,11 +124,12 @@
   "B0DTTNBVGB",
   "B0FFM4BY6C",
   "B00O1XHJYW",
-  "B0DQ8WV2PY"
+  "B0DQ8WV2PY",
+  "B016MPSUJO"
  ],
  "admin_id": 9298966416,
  "heartbeat": "2026-11-28",
- "total_posted": 83,
+ "total_posted": 84,
  "camp_i": 1,
  "last_slot": "2026-11-27 22:15",
  "empty_note": "2026-11-27"
